@@ -1,0 +1,141 @@
+CREATE TABLE `adm` (
+  `id` int(11) NOT NULL auto_increment,
+  `nome` varchar(80) NOT NULL,
+  `login` varchar(80) NOT NULL,
+  `senha` varchar(80) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+-- 
+-- Extraindo dados da tabela `adm`
+-- 
+
+INSERT INTO `adm` (`id`, `nome`, `login`, `senha`) VALUES 
+(1, 'Fernando Noronha', 'fernando', '123'),
+(2, 'Fabio Beccari', 'fabio', '123456');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `comentarios`
+-- 
+
+CREATE TABLE `comentarios` (
+  `id_comentario` int(11) NOT NULL auto_increment,
+  `id_projeto` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL,
+  `mensagem` text NOT NULL,
+  PRIMARY KEY  (`id_comentario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+-- 
+-- Extraindo dados da tabela `comentarios`
+-- 
+
+INSERT INTO `comentarios` (`id_comentario`, `id_projeto`, `nome`, `mensagem`) VALUES 
+(4, 4, 'Fernando Noronha', 'Parabéns pelo projeto desenvolvido.'),
+(5, 5, 'Fabio Beccari', 'Muito legal seu projeto'),
+(6, 10, 'Denise', 'parabens\r\n'),
+(7, 10, 'José', 'é isso ai...rsrs\r\n');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `portfolio`
+-- 
+
+CREATE TABLE `portfolio` (
+  `id` int(11) NOT NULL auto_increment,
+  `texto` longtext NOT NULL,
+  `foto` varchar(255) NOT NULL,
+  `link` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+-- 
+-- Extraindo dados da tabela `portfolio`
+-- 
+
+INSERT INTO `portfolio` (`id`, `texto`, `foto`, `link`) VALUES 
+(4, 'teste', 'port_01.jpg', 'teste'),
+(5, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ', 'port_02.jpg', 'http://www.becck.com'),
+(10, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ', '[1]port_03.jpg', 'http://www.terra.com.br');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `servicos`
+-- 
+
+CREATE TABLE `servicos` (
+  `id` int(11) NOT NULL auto_increment,
+  `texto` longtext NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+-- 
+-- Extraindo dados da tabela `servicos`
+-- 
+
+INSERT INTO `servicos` (`id`, `texto`) VALUES 
+(1, 'Fernando Noronha\r\n<br><br>\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?\r\n<br><br>\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n<br><br>\r\n<b>Where does it come from?</b>\r\n<br><br>\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\r\n<br><br>\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied\r\n<br><br>');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `sobre`
+-- 
+
+CREATE TABLE `sobre` (
+  `id` int(11) NOT NULL auto_increment,
+  `foto` varchar(200) NOT NULL,
+  `texto` longtext NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+-- 
+-- Extraindo dados da tabela `sobre`
+-- 
+
+INSERT INTO `sobre` (`id`, `foto`, `texto`) VALUES 
+(1, 'imagem.jpg', 'Fernando Noronha\r\n<br><br>\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?\r\n<br><br>\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n<br><br>\r\n<b>Where does it come from?</b>\r\n<br><br>\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\r\n<br><br>\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied\r\n<br><br>');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `upload`
+-- 
+
+CREATE TABLE `upload` (
+  `id` int(11) NOT NULL auto_increment,
+  `foto` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+-- 
+-- Extraindo dados da tabela `upload`
+-- 
+
+INSERT INTO `upload` (`id`, `foto`) VALUES 
+(3, 'ife_audios-icons.jpg');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `videos`
+-- 
+
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL auto_increment,
+  `texto` longtext NOT NULL,
+  `video` varchar(255) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+-- 
+-- Extraindo dados da tabela `videos`
+-- 
+
+INSERT INTO `videos` (`id`, `texto`, `video`) VALUES 
+(2, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'http://www.youtube.com/v/WieWad1b51A&hl=en&fs=1'),
+(5, 'são paulo\r\n', 'http://www.youtube.com/v/dbJIj-BKCEg&hl=en&fs=1');

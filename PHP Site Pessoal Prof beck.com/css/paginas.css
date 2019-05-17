@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+#fundo_paginas{background:#16428c;}
+
+#geral_paginas{
+	width:800px;
+	margin:0 auto;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+#conteudo{
+	width: 537px;
+	height:357px;
+	background:#375d9c;
+	float:left;
+	overflow:auto;
+	padding-right:10px;
+	padding-left:10px;
+	
+}
+
+
+#titulo_pg{
+	font-family: "Earwig Factory", Verdana, Arial, Helvetica, sans-serif;
+	font-size:55px;
+	color:#000066;
+	margin-bottom:10px;
+}
+
+/*****************************
+Menu
+*****************************/
+#menu{
+	width:175px;
+	height:300px;
+	border:0px solid #FF0000;
+	float:left;
+	margin-right:40px;
+	margin-top:20px;
+}
+
+ul{
+	margin:0px; 
+	padding:0px;
+}
+
+li{
+	list-style:none;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:24px;
+	text-align:right;
+	font-variant:small-caps;
+}
+
+li a{
+	text-decoration:none; 
+	color:#FFFFFF;
+	border-bottom:1px solid #FFFFFF;
+	display:block;
+	padding:5px 15px 5px 0px;
+}
+
+li a:hover{
+	background:#406db9;
+	
+}
+
+/*****************************
+PORTFOLIO
+*****************************/
+#img_port{
+	margin-bottom:20px;
+}
+
+#comentarios{
+	border-bottom:1px dashed #FFFFFF;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+
+/*****************************
+VIDEOS
+*****************************/
+#videos{
+	width:200px; 
+	height:150px;
+	margin-left:40px;
+	margin-bottom:40px;
+	float:left;
+}
